@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amona Canva Creator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* PROFILE SECTION */
+.profile {
+  text-align: center;
+  margin: 30px 20px 10px;
+}
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.profile h2 {
+  margin: 15px 0 5px;
+  color: #333;
+}
+.profile p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* CATEGORY TITLE */
+.category-title {
+  margin: 25px 20px 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* PRODUCT SCROLLER */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px 20px;
+}
+.scroll-container::-webkit-scrollbar { display: none; }
+
+/* PRODUCT CARD */
+.product-card {
+  background: white;
+  border-radius: 15px;
+  min-width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.product-info {
+  padding: 15px;
+  text-align: center;
+}
+.product-info h3 { margin: 8px 0; font-size: 16px; color: #333; }
+.product-info p { font-size: 13px; color: #777; margin: 5px 0; }
+.price { color: #2575fc; font-weight: 600; margin-bottom: 10px; }
+.buy-now-btn {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buy-now-btn:hover { opacity: 0.9; }
+.buy-options { display: none; margin-top: 10px; }
+.buy-options a {
+  display: inline-block;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.buy-options a.whatsapp { background: #25D366; }
+.buy-options a.tiktok { background: #010101; }
+.buy-options a.instagram { background: #E1306C; }
+
+/* ARROWS */
+.scroll-wrapper { position: relative; }
+.arrow {
+  position: absolute;
+  top: 40%;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  font-size: 18px;
+}
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* SOCIAL MEDIA CARD */
+.social-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  background: white;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.social-link img {
+  width: 20px; height: 20px;
+}
+.fb { background: #1877F2; }
+.insta { background: #E4405F; }
+.yt { background: #FF0000; }
+.tiktok { background: #000000; }
+.whatsapp { background: #25D366; }
+
+/* FOOTER */
+footer {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  text-align: center;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header>Amona Canva Creator</header>
+
+<!-- PROFILE -->
+<section class="profile">
+  <img src="https://i.ibb.co/FqkjwD4c/profile-pic.jpg" alt="Profile Picture">
+  <h2>Amona Canva Creator</h2>
+  <p>Creative designer — templates, stories & kids’ learning books</p>
+</section>
+
+<!-- CATEGORY: COLOR BOOKS -->
+<h2 class="category-title"> Kids Color Books</h2>
+<div class="scroll-wrapper">
+  <button class="arrow left" onclick="scrollLeft(this)">&#10094;</button>
+  <div class="scroll-container">
+    <script>
+      const colorBooks = [
+        {name:"Color Book 1",desc:"Fun colors for kids",price:"$10",img:"https://i.ibb.co/jvKhCW4h/Vegitable-esl-workbook.jpg/300x300?text=Color+Book+1"},
+        {name:"Color Book 2",desc:"Creative learning",price:"$12",img:"https://i.ibb.co/dwnFbbYp/Fun-counting-worksheet.jpg/300x300?text=Color+Book+2"},
+        {name:"Color Book 3",desc:"Educational book",price:"$14",img:"https://i.ibb.co/9kct821B/Fruit-coloring-activity.jpg/300x300?text=Color+Book+3"},
+        {name:"Color Book 4",desc:"Bright color fun",price:"$11",img:"https://i.ibb.co/mVmnVrJb/Alphabet-a-to-z-flash-card.jpg/300x300?text=Color+Book+4"},
+        {name:"Color Book 5",desc:"Activity coloring",price:"$9",img:"https://i.ibb.co/kV4NFdqg/Alphabets-tracing-activity.jpg/300x300?text=Color+Book+5"},
+        {name:"Color Book 6",desc:"Shapes and colors",price:"$13",img:"https://via.placeholder.com/300x300?text=Color+Book+6"}
+      ];
+    </script>
+  </div>
+  <button class="arrow right" onclick="scrollRight(this)">&#10095;</button>
+</div>
+
+<!-- CATEGORY: STORY BOOKS -->
+<h2 class="category-title">📚 Story Books</h2>
+<div class="scroll-wrapper">
+  <button class="arrow left" onclick="scrollLeft(this)">&#10094;</button>
+  <div class="scroll-container" id="stories"></div>
+  <button class="arrow right" onclick="scrollRight(this)">&#10095;</button>
+</div>
+
+<!-- CATEGORY: DESIGN TEMPLATES -->
+<h2 class="category-title">🖌️ Design Templates</h2>
+<div class="scroll-wrapper">
+  <button class="arrow left" onclick="scrollLeft(this)">&#10094;</button>
+  <div class="scroll-container" id="templates"></div>
+  <button class="arrow right" onclick="scrollRight(this)">&#10095;</button>
+</div>
+
+<!-- SOCIAL MEDIA LINKS -->
+<div class="social-card">
+  <a href="#" class="social-link fb"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"> Facebook</a>
+  <a href="https://instagram.com" class="social-link insta"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"> Instagram</a>
+  <a href="https://www.youtube.com" class="social-link yt"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"> YouTube</a>
+  <a href="https://www.tiktok.com/@mr_aqib_166?_t=ZN-90vnnijpSwF&_r=1" class="social-link tiktok"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046125.png"> TikTok</a>
+  <a href="https://wa.me/923044540402" class="social-link whatsapp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"> WhatsApp</a>
+</div>
+
+<footer>© 2025 Amona Graphics | All Rights Reserved</footer>
+
+<script>
+const scrollLeft = (btn) => {
+  const container = btn.nextElementSibling;
+  container.scrollBy({left: -300, behavior: 'smooth'});
+};
+const scrollRight = (btn) => {
+  const container = btn.previousElementSibling;
+  container.scrollBy({left: 300, behavior: 'smooth'});
+};
+
+function createCards(list, container) {
+  list.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.innerHTML = `
+      <img src="${item.img}" alt="${item.name}">
+      <div class="product-info">
+        <h3>${item.name}</h3>
+        <p>${item.desc}</p>
+        <p class="price">${item.price}</p>
+        <button class="buy-now-btn" onclick="toggleOptions(this,'${item.name}','${item.price}','${item.desc}')">Buy Now</button>
+        <div class="buy-options">
+          <a href="https://wa.me/923044540402?text=I%20want%20to%20buy%20${encodeURIComponent(item.name)}%20(${encodeURIComponent(item.price)})%20-%20${encodeURIComponent(item.desc)}" target="_blank" class="whatsapp">WhatsApp</a>
+          <a href="https://www.tiktok.com/@mr_aqib_166?_t=ZN-90vnnijpSwF&_r=1" target="_blank" class="tiktok">TikTok</a>
+          <a href="https://instagram.com" target="_blank" class="instagram">Instagram</a>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+const colorContainer = document.querySelector('.scroll-container');
+createCards(colorBooks, colorContainer);
+
+const storyBooks = [
+  {name:"Story Book 1",desc:"Short moral tales",price:"$10",img:"https://via.placeholder.com/300x300?text=Story+Book+1"},
+  {name:"Story Book 2",desc:"Adventure stories",price:"$12",img:"https://via.placeholder.com/300x300?text=Story+Book+2"},
+  {name:"Story Book 3",desc:"Bedtime stories",price:"$9",img:"https://via.placeholder.com/300x300?text=Story+Book+3"},
+  {name:"Story Book 4",desc:"Animal tales",price:"$11",img:"https://via.placeholder.com/300x300?text=Story+Book+4"},
+  {name:"Story Book 5",desc:"Kids fun book",price:"$13",img:"https://via.placeholder.com/300x300?text=Story+Book+5"},
+  {name:"Story Book 6",desc:"Learning stories",price:"$10",img:"https://via.placeholder.com/300x300?text=Story+Book+6"}
+];
+createCards(storyBooks, document.getElementById('stories'));
+
+const templates = [
+  {name:"Editable Template 1",desc:"Canva A4 template",price:"$8",img:"https://i.ibb.co/HfwK4HpC/pasta-design.jpg/300x420?text=Template+1"},
+  {name:"Editable Template 2",desc:"Canva poster",price:"$10",img:"https://i.ibb.co/RGvnwvQD/hot-wings.jpg/300x420?text=Template+2"},
+  {name:"Editable Template 3",desc:"Resume template",price:"$9",img:"https://i.ibb.co/qLj8sW1n/burger.jpg/300x420?text=Template+3"},
+  {name:"Editable Template 4",desc:"Flyer template",price:"$11",img:"https://i.ibb.co/VWt8K68T/hot-dog-template.jpg/300x420?text=Template+4"},
+  {name:"Editable Template 5",desc:"Instagram post design",price:"$12",img:"https://i.ibb.co/Rk3vZ4W3/burger-template.jpg/300x420?text=Template+5"},
+ {name:"Editable Template 6",desc:"Brochure layout",price:"$14",img:"https://i.ibb.co/xS6SsCFk/juice-design-template.jpg/300x420?text=Template+6"},
+  {name:"Editable Template 6",desc:"Brochure layout",price:"$14",img:"https://i.ibb.co/vCxY4Ff9/apple-design-template.jpg/300x420?text=Template+6"}
+];
+createCards(templates, document.getElementById('templates'));
+
+function toggleOptions(btn) {
+  const opt = btn.nextElementSibling;
+  opt.style.display = opt.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</body>
+</html>
