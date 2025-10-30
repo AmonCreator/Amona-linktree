@@ -193,12 +193,12 @@ footer {
   <div class="scroll-container">
     <script>
       const colorBooks = [
-        {name:"Color Book 1",desc:"Vegetables esl book",price:"$15",img:"https://i.ibb.co/mVmnVrJb/Alphabet-a-to-z-flash-card.jpg/300x300?text=Color+Book+1"},
-        {name:"Color Book 2",desc:"Creative learning",price:"$12",img:"https://i.ibb.co/dwnFbbYp/Fun-counting-worksheet.jpg/300x300?text=Color+Book+2"},
-        {name:"Color Book 3",desc:"Educational book",price:"$14",img:"https://i.ibb.co/9kct821B/Fruit-coloring-activity.jpg/300x300?text=Color+Book+3"},
-        {name:"Color Book 4",desc:"Bright color fun",price:"$11",img:"https://i.ibb.co/jvKhCW4h/Vegitable-esl-workbook.jpg/300x300?text=Color+Book+4"},
-        {name:"Color Book 5",desc:"Activity coloring",price:"$9",img:"https://i.ibb.co/kV4NFdqg/Alphabets-tracing-activity.jpg/300x300?text=Color+Book+5"},
-        {name:"Color Book 6",desc:"Shapes and colors",price:"$13",img:"https://via.placeholder.com/300x300?text=Color+Book+6"}
+        {name:"Color Book 1",desc:"Alphabet A to Z Flashcards",price:"$3",img:"https://i.ibb.co/mVmnVrJb/Alphabet-a-to-z-flash-card.jpg/300x300?text=Color+Book+1"},
+        {name:"Color Book 2",desc:"Fun Counting Worksheet",price:"$3",img:"https://i.ibb.co/dwnFbbYp/Fun-counting-worksheet.jpg/300x300?text=Color+Book+2"},
+        {name:"Color Book 3",desc:"Fruit Colouring Activity",price:"$3",img:"https://i.ibb.co/9kct821B/Fruit-coloring-activity.jpg/300x300?text=Color+Book+3"},
+        {name:"Color Book 4",desc:"Vegetable ESL Workbook",price:"$3",img:"https://i.ibb.co/jvKhCW4h/Vegitable-esl-workbook.jpg/300x300?text=Color+Book+4"},
+        {name:"Color Book 5",desc:"Alphabet Tracing Activity",price:"$3",img:"https://i.ibb.co/kV4NFdqg/Alphabets-tracing-activity.jpg/300x300?text=Color+Book+5"},
+        {name:"Color Book 6",desc:"Shapes and colors",price:"$3",img:"https://via.placeholder.com/300x300?text=Color+Book+6"}
       ];
     </script>
   </div>
@@ -267,7 +267,7 @@ const colorContainer = document.querySelector('.scroll-container');
 createCards(colorBooks, colorContainer);
 
 const storyBooks = [
-  {name:"Story Book 1",desc:"Amona stories",price:"$10",img:"https://i.ibb.co/5VDmvDY/1-20251029-165503-0000.jpg/300x300?text=Story+Book+1"},
+  {name:"Story Book 1",desc:"Sheila The Sheep Won't Go To Sleep",price:"$10",img:"https://i.ibb.co/5VDmvDY/1-20251029-165503-0000.jpg/300x300?text=Story+Book+1"},
   {name:"Story Book 2",desc:"Adventure stories",price:"$12",img:"https://via.placeholder.com/300x300?text=Story+Book+2"},
   {name:"Story Book 3",desc:"Bedtime stories",price:"$9",img:"https://via.placeholder.com/300x300?text=Story+Book+3"},
   {name:"Story Book 4",desc:"Animal tales",price:"$11",img:"https://via.placeholder.com/300x300?text=Story+Book+4"},
@@ -277,13 +277,13 @@ const storyBooks = [
 createCards(storyBooks, document.getElementById('stories'));
 
 const templates = [
-  {name:"Editable Template 1",desc:"Pasta Design",price:"$8",img:"https://i.ibb.co/HfwK4HpC/pasta-design.jpg/300x420?text=Template+1"},
-  {name:"Editable Template 2",desc:"Canva poster",price:"$10",img:"https://i.ibb.co/RGvnwvQD/hot-wings.jpg/300x420?text=Template+2"},
-  {name:"Editable Template 3",desc:"Resume template",price:"$9",img:"https://i.ibb.co/qLj8sW1n/burger.jpg/300x420?text=Template+3"},
-  {name:"Editable Template 4",desc:"Flyer template",price:"$11",img:"https://i.ibb.co/VWt8K68T/hot-dog-template.jpg/300x420?text=Template+4"},
-  {name:"Editable Template 5",desc:"Instagram post design",price:"$12",img:"https://i.ibb.co/Rk3vZ4W3/burger-template.jpg/300x420?text=Template+5"},
- {name:"Editable Template 6",desc:"Brochure layout",price:"$14",img:"https://i.ibb.co/xS6SsCFk/juice-design-template.jpg/300x420?text=Template+6"},
-  {name:"Editable Template 6",desc:"Brochure layout",price:"$14",img:"https://i.ibb.co/vCxY4Ff9/apple-design-template.jpg/300x420?text=Template+6"}
+  {name:"Editable Template 1",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/HfwK4HpC/pasta-design.jpg/300x420?text=Template+1"},
+  {name:"Editable Template 2",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/RGvnwvQD/hot-wings.jpg/300x420?text=Template+2"},
+  {name:"Editable Template 3",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/qLj8sW1n/burger.jpg/300x420?text=Template+3"},
+  {name:"Editable Template 4",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/VWt8K68T/hot-dog-template.jpg/300x420?text=Template+4"},
+  {name:"Editable Template 5",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/Rk3vZ4W3/burger-template.jpg/300x420?text=Template+5"},
+ {name:"Editable Template 6",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/xS6SsCFk/juice-design-template.jpg/300x420?text=Template+6"},
+  {name:"Editable Template 6",desc:"Food Poster",price:"$2",img:"https://i.ibb.co/vCxY4Ff9/apple-design-template.jpg/300x420?text=Template+6"}
 ];
 createCards(templates, document.getElementById('templates'));
 
@@ -294,6 +294,7 @@ function toggleOptions(btn) {
 </script>
 </body>
 </html>
+
 
 
 
